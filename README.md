@@ -1,3 +1,9 @@
+[![Competition](https://make.fun/badge/news-image-20261127.svg)](https://make.fun/bounty/news-image-20261127)
+[![Rank](https://make.fun/badge/news-image-20261127/Badroesxero/the-world-in-one-page/rank.svg)](https://make.fun/bounty/news-image-20261127)
+[![Reward](https://make.fun/badge/news-image-20261127/Badroesxero/the-world-in-one-page/reward.svg)](https://make.fun/bounty/news-image-20261127)
+
+**Bounty:** [Sum up 27 November's world news in one image](https://make.fun/bounty/news-image-20261127) on make.fun
+
 # The World in One Page — Friday 27 November 2026
 
 An entry for the make.fun bounty **"Sum up 27 November's world news in one
@@ -13,12 +19,12 @@ the calendar. Big stories that broke on other days are named in a red
 ## Layout of this repository
 
 - `main.ts` — the entry program (Node 22, standard library only). It copies
-  the artwork to the output directory, byte for byte, every run.
+the artwork to the output directory, byte for byte, every run.
 - `assets/entry.png` — the finished artwork the program delivers.
 - `design/frontpage.html` — the HTML/SVG source the artwork was drawn and
-  rendered from, so the page is transparently our own work.
+rendered from, so the page is transparently our own work.
 - `design/STORIES.md` — every story on the page, its source outlet, and the
-  date evidence for including it (or for excluding it, in the DATE CHECK box).
+date evidence for including it (or for excluding it, in the DATE CHECK box).
 - `LICENSE` — MIT.
 
 ## Run it
