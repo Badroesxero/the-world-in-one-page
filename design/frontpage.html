@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World in One Page — Friday 27 November 2026</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1024px; height:1024px; overflow:hidden; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f8f4e7; color:#1b1b1b;
+    padding:12px 14px 8px 14px;
+    border:6px double #1b1b1b;
+  }
+  .serif { font-family: Georgia, 'Times New Roman', 'DejaVu Serif', serif; }
+  .topbar { display:flex; justify-content:space-between; font-size:10px; letter-spacing:1.5px;
+            border-bottom:1px solid #1b1b1b; padding-bottom:3px; text-transform:uppercase; }
+  .title { text-align:center; font-size:41px; font-weight:bold; letter-spacing:1px; line-height:1.04; padding-top:2px; }
+  .dateline { display:flex; align-items:baseline; justify-content:space-between;
+              border-top:3px solid #1b1b1b; border-bottom:1px solid #1b1b1b; margin-top:2px; padding:2px 0 3px 0; }
+  .dateline .date { font-size:31px; font-weight:bold; color:#b3001b; letter-spacing:.5px; }
+  .dateline .side { font-size:10.5px; text-align:right; line-height:1.35; }
+  .redstrip { background:#b3001b; color:#fff; margin-top:6px; padding:5px 8px;
+              font-size:13.5px; font-weight:bold; text-align:center; letter-spacing:.2px; }
+  .stats { display:flex; gap:5px; margin-top:6px; }
+  .stat { flex:1; border:1.5px solid #1b1b1b; background:#fffdf4; text-align:center; padding:4px 2px 3px 2px; }
+  .stat b { display:block; font-size:17px; color:#b3001b; }
+  .stat span { font-size:8.3px; line-height:1.15; display:block; text-transform:uppercase; letter-spacing:.3px; }
+  .leads { display:flex; gap:8px; margin-top:7px; }
+  .lead { flex:1; border:1.5px solid #1b1b1b; background:#fffdf4; padding:5px 7px 5px 7px; }
+  .lead svg { display:block; width:100%; height:80px; }
+  .kicker { color:#b3001b; font-weight:bold; font-size:10.5px; letter-spacing:1px; margin-top:4px; }
+  .lead h2 { font-size:15.5px; line-height:1.12; margin:1px 0 2px 0; }
+  .lead p { font-size:10.3px; line-height:1.28; }
+  .num { display:inline-block; background:#b3001b; color:#fff; border-radius:50%;
+         width:15px; height:15px; line-height:15px; text-align:center; font-size:10px; font-weight:bold; }
+  .sechead { display:flex; align-items:center; gap:8px; margin-top:7px; }
+  .sechead .t { font-size:13px; font-weight:bold; letter-spacing:1.5px; white-space:nowrap; }
+  .sechead .rule { flex:1; border-top:2.5px solid #1b1b1b; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; margin-top:5px; }
+  .cell { border:1px solid #8a8378; background:#fffdf4; padding:4px 5px 3px 5px; height:53px; overflow:hidden;
+          display:flex; gap:5px; }
+  .cell svg { flex:0 0 26px; width:26px; height:26px; margin-top:2px; }
+  .cell h3 { font-size:10.6px; line-height:1.14; }
+  .cell p { font-size:9px; line-height:1.22; color:#333; }
+  .cell .num { width:13px; height:13px; line-height:13px; font-size:9px; }
+  .timeline { display:flex; gap:5px; margin-top:6px; }
+  .tp { flex:1; border:1.5px solid #14406b; background:#eef3f8; padding:3px 6px 3px 6px; }
+  .tp b { font-size:10px; color:#14406b; letter-spacing:1px; display:block; }
+  .tp span { font-size:9.3px; line-height:1.3; display:block; }
+  .bottom { display:flex; gap:8px; margin-top:5px; }
+  .also { width:372px; border:1.5px solid #1b1b1b; background:#fffdf4; padding:5px 8px 4px 8px; }
+  .also h4, .mapbox h4 { font-size:11.5px; letter-spacing:1px; margin-bottom:3px; }
+  .also ol { list-style:none; }
+  .also li { font-size:9.6px; line-height:1.27; padding:.7px 0; border-bottom:.5px dotted #b9b2a2; }
+  .also li b { color:#b3001b; }
+  .mapbox { width:308px; border:1.5px solid #1b1b1b; background:#eef3f8; padding:5px 6px 3px 6px; }
+  .mapbox svg { display:block; width:100%; height:136px; }
+  .mapbox .cap { font-size:8.6px; line-height:1.25; }
+  .rightcol { flex:1; display:flex; flex-direction:column; gap:6px; }
+  .datecheck { border:2.5px solid #b3001b; background:#fdf0ef; padding:5px 8px 4px 8px; }
+  .datecheck h4 { color:#b3001b; font-size:11.5px; letter-spacing:.5px; margin-bottom:2px; }
+  .datecheck li { font-size:9.4px; line-height:1.3; list-style:none; padding:.8px 0; }
+  .datecheck li b { color:#b3001b; }
+  .how { border:1px solid #8a8378; background:#fffdf4; padding:4px 8px; font-size:8.8px; line-height:1.35; }
+  .how b { letter-spacing:.5px; }
+  .footer { margin-top:6px; border-top:3px solid #1b1b1b; padding-top:3px;
+            display:flex; justify-content:space-between; font-size:9.5px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>One image &bull; The whole day</div>
+  <div>No photographs &mdash; every picture drawn</div>
+  <div>All times UTC</div>
+</div>
+
+<div class="title serif">THE WORLD IN ONE PAGE</div>
+
+<div class="dateline">
+  <div class="date serif">FRIDAY 27 NOVEMBER 2026</div>
+  <div class="side">33 stories from one day, each checked<br>against the calendar &bull; 6 more checked &amp; excluded</div>
+</div>
+
+<div class="redstrip">KUWAIT DRONE STRIKE KILLS TWO ITALIAN TECHNICIANS &nbsp;&bull;&nbsp; GAZA STRIKES KILL TEN AS HAMAS WEIGHS REPLY &nbsp;&bull;&nbsp; BLACK FRIDAY OPENS: $12.9B ONLINE FORECAST</div>
+
+<div class="stats">
+  <div class="stat"><b>2</b><span>Italians killed in Kuwait strike</span></div>
+  <div class="stat"><b>$12.9B</b><span>Black Friday online sales forecast</span></div>
+  <div class="stat"><b>126M</b><span>Americans expected to shop today</span></div>
+  <div class="stat"><b>10</b><span>Killed in Gaza strikes</span></div>
+  <div class="stat"><b>500,000+</b><span>Without power in US storm</span></div>
+  <div class="stat"><b>7,000 t</b><span>Diesel on tanker capsized off Ibiza</span></div>
+  <div class="stat"><b>400,000</b><span>Special votes in NZ final count</span></div>
+  <div class="stat"><b>12,000</b><span>Ebola cases in DR Congo</span></div>
+</div>
+
+<div class="leads">
+  <div class="lead">
+    <svg viewBox="0 0 300 92">
+      <rect width="300" height="92" fill="#f4d8a0"/>
+      <circle cx="258" cy="18" r="11" fill="#e8a13a"/>
+      <rect y="66" width="300" height="26" fill="#c9b083"/>
+      <rect x="30" y="52" width="52" height="14" fill="#5a5148"/>
+      <rect x="50" y="40" width="10" height="14" fill="#5a5148"/>
+      <circle cx="55" cy="36" r="10" fill="none" stroke="#5a5148" stroke-width="3"/>
+      <path d="M150 22 l34 6 -30 6 -8 -4 -8 4 z" fill="#333"/>
+      <path d="M150 30 q-24 16 -40 34" stroke="#b3001b" stroke-width="2.5" fill="none" stroke-dasharray="5 3"/>
+      <path d="M96 66 l7 -14 5 10 9 -8 -3 12 10 2 -11 6 4 9 -10 -5 -6 9 -2 -11 -12 2 8 -7 -6 -8 11 1 z" fill="#e2571e"/>
+      <rect x="215" y="58" width="60" height="9" fill="#7a6a55"/>
+      <rect x="228" y="49" width="8" height="10" fill="#7a6a55"/>
+    </svg>
+    <div class="kicker"><span class="num">1</span> KUWAIT &mdash; WAR</div>
+    <h2 class="serif">Drone strike on Kuwait air-defence site kills two Italian technicians</h2>
+    <p>Italy and Kuwait blame Iran for the strike on the air-defence position; Tehran denies any involvement.</p>
+  </div>
+  <div class="lead">
+    <svg viewBox="0 0 300 92">
+      <rect width="300" height="92" fill="#dfe6ec"/>
+      <rect y="70" width="300" height="22" fill="#8d8578"/>
+      <g fill="#5d574e">
+        <rect x="12" y="38" width="26" height="34"/><rect x="44" y="28" width="20" height="44"/>
+        <rect x="70" y="44" width="30" height="28"/><rect x="205" y="34" width="24" height="38"/>
+        <rect x="235" y="24" width="18" height="48"/><rect x="259" y="42" width="30" height="30"/>
+      </g>
+      <path d="M120 66 q6 -26 20 -34 q-4 16 6 22 q10 -12 8 -24 q16 10 12 36 z" fill="#6e675c"/>
+      <path d="M168 60 q4 -18 14 -24 q-2 12 5 16 q7 -8 6 -17 q11 8 8 25 z" fill="#857e70"/>
+      <path d="M96 20 l6 12 13 2 -9 9 2 13 -12 -6 -12 6 2 -13 -9 -9 13 -2 z" fill="#e2571e"/>
+      <path d="M255 12 l4 8 9 1 -6 6 1 9 -8 -4 -8 4 1 -9 -6 -6 9 -1 z" fill="#e8a13a"/>
+    </svg>
+    <div class="kicker"><span class="num">2</span> GAZA &mdash; WAR</div>
+    <h2 class="serif">Ten killed in Israeli strikes on Gaza as Hamas weighs its reply</h2>
+    <p>Strikes across the enclave kill ten people; Hamas deliberates its response as the toll mounts.</p>
+  </div>
+  <div class="lead">
+    <svg viewBox="0 0 300 92">
+      <rect width="300" height="92" fill="#eef3f8"/>
+      <path d="M20 30 h260 l-14 14 H34 z" fill="#b3001b"/>
+      <g fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold">
+        <text x="52" y="40">SALE</text><text x="122" y="40">SALE</text><text x="192" y="40">SALE</text>
+      </g>
+      <rect x="24" y="46" width="252" height="40" fill="#fdf6dd"/>
+      <path d="M52 58 h26 l-4 20 H58 z" fill="#14406b"/>
+      <path d="M86 56 h24 l-3 22 h-18 z" fill="#c9920e"/>
+      <path d="M196 58 h28 l-4 20 h-20 z" fill="#3d7a44"/>
+      <circle cx="150" cy="80" r="4" fill="#333"/><circle cx="168" cy="80" r="4" fill="#333"/>
+      <path d="M138 60 h34 l-5 16 h-24 z" fill="none" stroke="#333" stroke-width="2.5"/>
+      <path d="M138 60 l-6 -6" stroke="#333" stroke-width="2.5"/>
+      <circle cx="248" cy="62" r="13" fill="#b3001b"/>
+      <text x="248" y="66" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">-50%</text>
+    </svg>
+    <div class="kicker"><span class="num">3</span> UNITED STATES &mdash; SHOPPING</div>
+    <h2 class="serif">Black Friday opens: $12.9B online forecast, 126M expected to shop</h2>
+    <p>America's biggest shopping day begins &mdash; but half of advertised deals are found no cheaper than before.</p>
+  </div>
+</div>
+
+<div class="sechead"><div class="t">AROUND THE WORLD IN TWENTY MORE</div><div class="rule"></div></div>
+
+<div class="grid">
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#22304a"/><path d="M6 20 L18 8 l3 -3 -1 5 -8 8 -4 4 z" fill="#e8e4da"/><path d="M5 21 q3 -1 4 -4" stroke="#e2571e" stroke-width="2" fill="none"/><circle cx="21" cy="19" r="1.6" fill="#fff"/><circle cx="9" cy="5" r="1.2" fill="#fff"/></svg>
+    <div><h3><span class="num">4</span> UKRAINE — Missiles and 100+ drones hit Kyiv and Kharkiv</h3>
+    <p>Overnight ballistic barrage kills at least 3 as air defences engage waves of drones.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#bcd6e8"/><path d="M4 10 l16 -3 3 6 -16 2 z" fill="#7a4a2b" transform="rotate(14 13 11)"/><path d="M2 20 q4 -3 8 0 q4 3 8 0 q4 -3 6 0" stroke="#14406b" stroke-width="2" fill="none"/><path d="M2 24 q4 -3 8 0 q4 3 8 0 q4 -3 6 0" stroke="#14406b" stroke-width="2" fill="none"/></svg>
+    <div><h3><span class="num">5</span> SPAIN — Tanker capsizes off Ibiza with 7,000 t of diesel</h3>
+    <p>Spain races to contain the spill before it reaches the island's beaches.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#f4d8a0"/><path d="M13 3 l8 3 v6 c0 5 -3 8 -8 11 c-5 -3 -8 -6 -8 -11 V6 z" fill="#3d7a44"/><path d="M17 4 l5 -2 -1 5 -5 5 -2 -2 z" fill="#b3001b"/></svg>
+    <div><h3><span class="num">6</span> SAUDI ARABIA — Two Houthi missiles intercepted</h3>
+    <p>A Houthi drone also targets the Jazan refinery as Red Sea tensions flare again.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#eef3f8"/><path d="M13 2 l9 3 v7 c0 6 -4 9 -9 12 c-5 -3 -9 -6 -9 -12 V5 z" fill="#14406b"/><text x="13" y="17" fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">$</text></svg>
+    <div><h3><span class="num">7</span> JAPAN — $350B five-year defence plan weighed</h3>
+    <p>Tokyo debates its biggest defence build-up yet amid regional tensions.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#fdf0ef"/><circle cx="13" cy="13" r="6" fill="#b3001b"/><g stroke="#b3001b" stroke-width="2"><path d="M13 3 v4 M13 19 v4 M3 13 h4 M19 13 h4 M6 6 l3 3 M17 17 l3 3 M20 6 l-3 3 M9 17 l-3 3"/></g><circle cx="11" cy="11" r="1.4" fill="#fff"/><circle cx="15" cy="15" r="1.4" fill="#fff"/></svg>
+    <div><h3><span class="num">8</span> DR CONGO — Ebola passes 12,000 cases</h3>
+    <p>Nearly 6,000 dead as fighting hampers responders in the east.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#bcd6e8"/><path d="M4 16 h18 l-3 5 H7 z" fill="#7a4a2b"/><circle cx="9" cy="12" r="2" fill="#333"/><circle cx="13" cy="11" r="2" fill="#333"/><circle cx="17" cy="12" r="2" fill="#333"/><path d="M2 24 q4 -3 8 0 q4 3 8 0 q4 -3 6 0" stroke="#14406b" stroke-width="2" fill="none"/></svg>
+    <div><h3><span class="num">9</span> CANARIES — Military sent to El Hierro after migrant surge</h3>
+    <p>Record November: 10,000+ arrivals in the Canary Islands this month.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#eef3f8"/><path d="M3 5 v18 M3 23 h20" stroke="#333" stroke-width="1.6"/><path d="M4 8 L10 12 L14 10 L22 18" stroke="#b3001b" stroke-width="2.2" fill="none"/><path d="M22 18 l-5 -1 M22 18 l-1 -5" stroke="#b3001b" stroke-width="2.2" fill="none"/></svg>
+    <div><h3><span class="num">10</span> BRITAIN — Net migration falls to lowest since 1997</h3>
+    <p>Official figures show the sharpest drop in arrivals in nearly three decades.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#f4ecd8"/><rect x="4" y="18" width="18" height="3.4" fill="#7a4a2b"/><rect x="9" y="8" width="11" height="4.4" rx="2" fill="#7a4a2b" transform="rotate(-24 14 10)"/><rect x="16" y="12" width="3" height="7" fill="#7a4a2b" transform="rotate(-24 17 15)"/></svg>
+    <div><h3><span class="num">11</span> FRANCE — Depardieu ordered to stand trial</h3>
+    <p>A judge sends the film star Gérard Depardieu to trial, French media report.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#e8e4da"/><g fill="#333"><rect x="4" y="4" width="5.5" height="5.5"/><rect x="9.5" y="9.5" width="5.5" height="5.5"/><rect x="15" y="15" width="5.5" height="5.5"/><rect x="15" y="4" width="5.5" height="5.5" fill="#fff" stroke="#333"/><rect x="4" y="15" width="5.5" height="5.5" fill="#fff" stroke="#333"/></g><path d="M13 6 a3 3 0 1 1 -0.1 0 M10 20 h6 l-1 -4 h-4 z" fill="#b3001b"/></svg>
+    <div><h3><span class="num">12</span> CHESS — Gukesh–Sindarov Game 3 ends in a draw</h3>
+    <p>Honours even again as the title match grinds through its third game.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#e6f0e6"/><rect x="6" y="3" width="4" height="15" rx="2" fill="#c9920e" transform="rotate(18 8 10)"/><circle cx="18" cy="18" r="4.4" fill="#b3001b"/><path d="M15.5 15.5 a4 4 0 0 1 5 0" stroke="#fff" stroke-width="1.4" fill="none"/></svg>
+    <div><h3><span class="num">13</span> CRICKET — India U-19 Women beat England</h3>
+    <p>India's youngsters take the youth one-day honours against England.</p></div>
+  </div>
+
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#eef3f8"/><rect x="5" y="11" width="16" height="11" fill="#14406b"/><rect x="3" y="8" width="20" height="3.4" fill="#333"/><path d="M9 5 l8 4 -3 0 -8 -4 z" fill="#fff" stroke="#333"/><path d="M10 14 l4 4 M14 14 l-4 4" stroke="#fff" stroke-width="1.8"/></svg>
+    <div><h3><span class="num">14</span> NEW ZEALAND — Election final count completed</h3>
+    <p>All 400,000 special votes are in as the official result is confirmed.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#f4ecd8"/><rect x="3" y="6" width="20" height="14" fill="#fff" stroke="#8a8378"/><path d="M3 7 l10 8 L23 7" fill="none" stroke="#8a8378"/><path d="M13 12 v6 M10.5 15 h5" stroke="#c9920e" stroke-width="1.8"/></svg>
+    <div><h3><span class="num">15</span> VATICAN — Pope Leo XIV to vote in US midterms by mail</h3>
+    <p>The American-born pope will cast his ballot by post, the Vatican confirms.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#dfe6ec"/><path d="M5 22 L13 8 L21 22 z" fill="#5d574e"/><path d="M11 8 q-2 -4 2 -5 q-1 3 2 3 q-2 1 -2 2 z" fill="#857e70"/><path d="M10 15 l3 -3 3 3 -2 7 h-2 z" fill="#e2571e"/></svg>
+    <div><h3><span class="num">16</span> PHILIPPINES — Mount Mayon erupts</h3>
+    <p>The eruption raises fears of a larger event; nearby residents stay on alert.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#fdf0ef"/><rect x="4" y="4" width="18" height="6" fill="#b3001b"/><g fill="#333"><circle cx="8" cy="15" r="2.2"/><circle cx="13" cy="14" r="2.2"/><circle cx="18" cy="15" r="2.2"/><path d="M5 23 v-3 a3 3 0 0 1 6 0 v3 M10 23 v-4 a3 3 0 0 1 6 0 v4 M15 23 v-3 a3 3 0 0 1 6 0 v3"/></g></svg>
+    <div><h3><span class="num">17</span> FRANCE — Students prepare nationwide protests</h3>
+    <p>Unions call students out over education reforms in the coming days.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#eef3f8"/><rect x="7" y="7" width="12" height="12" fill="#14406b"/><g stroke="#14406b" stroke-width="1.6"><path d="M10 7 V3 M16 7 V3 M10 23 v-4 M16 23 v-4 M7 10 H3 M7 16 H3 M23 10 h-4 M23 16 h-4"/></g><circle cx="13" cy="13" r="2.4" fill="#c9920e"/></svg>
+    <div><h3><span class="num">18</span> EU &amp; CANADA — Deeper AI collaboration planned</h3>
+    <p>Brussels and Ottawa set out plans to work closer on artificial intelligence.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#e8e4da"/><rect x="8" y="4" width="10" height="18" fill="#5d574e"/><g fill="#f4d8a0"><rect x="10.5" y="7" width="2" height="2"/><rect x="14" y="7" width="2" height="2"/><rect x="10.5" y="11" width="2" height="2"/><rect x="14" y="11" width="2" height="2"/></g><path d="M13 22 q-3 -4 0 -7 q3 3 0 7" fill="#e2571e"/></svg>
+    <div><h3><span class="num">19</span> HONG KONG — One year since the deadly high-rise fire</h3>
+    <p>The city marks a year since the blaze that killed scores in a tower block.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#eef3f8"/><path d="M11 22 V8 a2 4 0 0 1 4 0 v14 z" fill="#5a5148"/><path d="M11 14 l-4 6 h4 M15 14 l4 6 h-4" fill="#5a5148"/><path d="M4 4 L22 22" stroke="#b3001b" stroke-width="2.6"/></svg>
+    <div><h3><span class="num">20</span> NORTH KOREA — KN-23 missile supplies to Russia suspended</h3>
+    <p>Ukrainian intelligence says Pyongyang has halted the shipments.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#dfe6ec"/><path d="M13 2 q5 5 5 11 l-3 5 h-4 L8 13 q0 -6 5 -11" fill="#14406b"/><circle cx="13" cy="10" r="2.4" fill="#fff"/><path d="M10 20 q3 3 6 0 l-1 3 h-4 z" fill="#e2571e"/><circle cx="21" cy="19" r="4" fill="#c9920e"/><text x="21" y="22" fill="#fff" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle">$</text></svg>
+    <div><h3><span class="num">21</span> MUSK — Two SpaceX shares pledged for every US child</h3>
+    <p>Elon Musk promises two shares per American child, in his latest pledge.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#fdf6dd"/><path d="M5 9 l10 -3 v12 L5 15 z" fill="#c9920e"/><rect x="3" y="10" width="3" height="9" fill="#7a4a2b"/><path d="M18 9 q4 3 0 7 M20 6 q6 5 0 11" stroke="#b3001b" stroke-width="1.8" fill="none"/></svg>
+    <div><h3><span class="num">22</span> AMAZON — Workers strike on Black Friday</h3>
+    <p>Staff walk out on the retail giant's busiest day over pay and conditions.</p></div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 26 26"><rect width="26" height="26" fill="#dfe6ec"/><path d="M6 15 a5 5 0 1 1 1 -9 a6 6 0 0 1 11 2 a4.5 4.5 0 0 1 -1 7 z" fill="#8d99a8"/><path d="M13 13 l-3 6 h4 l-2 5 6 -7 h-4 l2 -4 z" fill="#e8a13a"/></svg>
+    <div><h3><span class="num">23</span> US STORM — Thanksgiving storm cuts power to 500,000+</h3>
+    <p>Outages hit as 80 million Americans travel for the holiday.</p></div>
+  </div>
+</div>
+
+<div class="sechead"><div class="t">THE DAY IN UTC</div><div class="rule"></div></div>
+<div class="timeline">
+  <div class="tp"><b>OVERNIGHT</b><span><b style="display:inline;color:#b3001b">4</b> Kyiv barrage as missiles &amp; drones come in &bull; <b style="display:inline;color:#b3001b">23</b> US storm cuts power</span></div>
+  <div class="tp"><b>MORNING</b><span><b style="display:inline;color:#b3001b">1</b> Kuwait strike confirmed &bull; <b style="display:inline;color:#b3001b">2</b> Gaza strikes &bull; <b style="display:inline;color:#b3001b">16</b> Mayon erupts</span></div>
+  <div class="tp"><b>AFTERNOON</b><span><b style="display:inline;color:#b3001b">5</b> Ibiza spill response &bull; <b style="display:inline;color:#b3001b">8</b> Ebola tops 12,000 &bull; <b style="display:inline;color:#b3001b">10</b> UK migration low</span></div>
+  <div class="tp"><b>EVENING</b><span><b style="display:inline;color:#b3001b">3</b> Black Friday rush &bull; <b style="display:inline;color:#b3001b">14</b> NZ final count &bull; <b style="display:inline;color:#b3001b">12</b> Chess game drawn</span></div>
+</div>
+
+<div class="bottom">
+  <div class="also">
+    <h4>ALSO ON FRIDAY 27 NOVEMBER</h4>
+    <ol>
+      <li><b>24</b> &mdash; UN agency backs Palestinian economic recovery measure</li>
+      <li><b>25</b> &mdash; US congratulates Syria on Captagon seizures and captured Iranian arms</li>
+      <li><b>26</b> &mdash; GPS jamming reported in Estonia as drone nears Russian vessel</li>
+      <li><b>27</b> &mdash; French producer prices jump 9.6% in October</li>
+      <li><b>28</b> &mdash; Brazil condemns Trump's new tariff proposals</li>
+      <li><b>29</b> &mdash; New Zealand 77&ndash;1 at lunch against India in Christchurch Test</li>
+      <li><b>30</b> &mdash; Kenya discharges its last Ebola patient</li>
+      <li><b>31</b> &mdash; Norway's supreme court rules disputed oil licences invalid</li>
+      <li><b>32</b> &mdash; Ghana unveils 'Heritage Series' banknotes</li>
+      <li><b>33</b> &mdash; Serbia sets its presidential election date: 27 December</li>
+    </ol>
+  </div>
+
+  <div class="mapbox">
+    <h4>WHERE IT HAPPENED</h4>
+    <svg viewBox="0 0 296 158">
+      <g fill="#d8c9a3" stroke="#8a8378" stroke-width="1">
+        <polygon points="8,30 40,16 84,20 96,34 84,52 62,54 48,66 30,62 14,48"/>
+        <polygon points="66,78 88,74 94,98 82,132 68,140 60,104"/>
+        <polygon points="132,62 168,58 178,84 164,120 146,124 134,94"/>
+        <polygon points="128,20 292,14 294,44 262,58 236,66 214,58 196,44 172,34 150,26 134,30"/>
+        <ellipse cx="238" cy="96" rx="8" ry="4"/>
+        <ellipse cx="254" cy="103" rx="7" ry="4"/>
+        <polygon points="240,112 282,110 288,130 250,136"/>
+      </g>
+      <g font-family="Arial" font-size="8.5" font-weight="bold" text-anchor="middle">
+        <circle cx="52" cy="42" r="7.5" fill="#b3001b"/><text x="52" y="45" fill="#fff">3</text>
+        <circle cx="168" cy="32" r="7.5" fill="#b3001b"/><text x="168" y="35" fill="#fff">4</text>
+        <circle cx="138" cy="24" r="7.5" fill="#b3001b"/><text x="138" y="27" fill="#fff">10</text>
+        <circle cx="147" cy="47" r="7.5" fill="#b3001b"/><text x="147" y="50" fill="#fff">5</text>
+        <circle cx="126" cy="68" r="7.5" fill="#b3001b"/><text x="126" y="71" fill="#fff">9</text>
+        <circle cx="198" cy="50" r="7.5" fill="#b3001b"/><text x="198" y="53" fill="#fff">1</text>
+        <circle cx="180" cy="60" r="7.5" fill="#b3001b"/><text x="180" y="63" fill="#fff">2</text>
+        <circle cx="192" cy="72" r="7.5" fill="#b3001b"/><text x="192" y="75" fill="#fff">6</text>
+        <circle cx="160" cy="94" r="7.5" fill="#b3001b"/><text x="160" y="97" fill="#fff">8</text>
+        <circle cx="272" cy="38" r="7.5" fill="#b3001b"/><text x="272" y="41" fill="#fff">7</text>
+        <circle cx="257" cy="76" r="7.5" fill="#b3001b"/><text x="257" y="79" fill="#fff">16</text>
+        <circle cx="283" cy="140" r="7.5" fill="#b3001b"/><text x="283" y="143" fill="#fff">14</text>
+      </g>
+    </svg>
+    <div class="cap">Pins carry the story numbers used across this page: find the place, then find the story.</div>
+  </div>
+
+  <div class="rightcol">
+    <div class="datecheck">
+      <h4>DATE CHECK &mdash; NOT 27 NOVEMBER</h4>
+      <ul>
+        <li><b>&times;</b> Macy's Thanksgiving Parade postponement &mdash; announced Thu 26 Nov</li>
+        <li><b>&times;</b> US tariffs on 14 partners &mdash; proposed on Wednesday, not Friday</li>
+        <li><b>&times;</b> Guinea-Bissau election delay &mdash; decreed Thu 26 Nov</li>
+        <li><b>&times;</b> UK train-stabbing verdict &mdash; Thu 26 Nov</li>
+        <li><b>&times;</b> South Korea interest-rate rise &mdash; Thu 26 Nov</li>
+        <li><b>&times;</b> Mumbai 26/11 attacks anniversary &mdash; marked Thu 26 Nov</li>
+      </ul>
+    </div>
+    <div class="how"><b>HOW WE CHECKED.</b> Every story above happened or was first reported on Friday 27 November 2026 in some time zone, checked against wire reports dated that day. Big stories from other days are named in the red box, never dressed up as Friday's. Figures are as reported on the day; forecasts are labelled as forecasts.</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>THE WORLD IN ONE PAGE &bull; One day only: Friday 27 November 2026</div>
+  <div>Sources: Reuters, AP, AFP and national outlets &bull; 33 stories</div>
+</div>
+
+</body>
+</html>
